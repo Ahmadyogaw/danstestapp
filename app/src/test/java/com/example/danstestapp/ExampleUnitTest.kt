@@ -1,4 +1,4 @@
-package com.example.danstestapp
+package com.danstestapp
 
 import org.junit.Test
 

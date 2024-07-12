@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+      android:id="@+id/companyLogoImageView"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:src="@tools:sample/avatars" />
+
+    <TextView
+      android:id="@+id/titleTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/companyLogoImageView"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Senior Creative Front End Web Developer" />
+
+    <TextView
+      android:id="@+id/companyTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@id/titleTextView"
+      app:layout_constraintTop_toBottomOf="@id/titleTextView"
+      tools:text="SweetRush" />
+
+    <TextView
+      android:id="@+id/locationTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@id/titleTextView"
+      app:layout_constraintTop_toBottomOf="@id/companyTextView"
+      tools:text="Remote" />
+
+    <TextView
+      android:id="@+id/typeTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@id/titleTextView"
+      app:layout_constraintTop_toBottomOf="@id/locationTextView"
+      tools:text="Full Time" />
+
+    <TextView
+      android:id="@+id/descriptionLabel"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="Description"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/companyLogoImageView" />
+
+    <TextView
+      android:id="@+id/descriptionTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/descriptionLabel"
+      tools:text="Job description..." />
+
+    <TextView
+      android:id="@+id/howToApplyLabel"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="How to Apply"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/descriptionTextView" />
+
+    <TextView
+      android:id="@+id/howToApplyTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/howToApplyLabel"
+      tools:text="How to apply..." />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
