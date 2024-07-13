@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Dans Test App</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_login">Notifications</string>
+    <string name="label_login_with_google">Login With Google</string>
+    <string name="label_logout">Logout</string>
+    <string name="company_logo">Company</string>
+
+</resources>
