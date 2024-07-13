@@ -13,6 +13,7 @@ This repository contains the source code for the Dans Android App, following the
 This project is structured using the MVVM (Model-View-ViewModel) architecture pattern, which separates the user interface logic from the business logic. I use this pattern for simple API calls
 
 [MVVM base patter](https://github.com/emedinaa/kotlin-mvvm)
+
 ### Requirements
 
 To run the Dans Android App, you need the following:
@@ -29,9 +30,11 @@ To run the Dans Android App, you need the following:
 To get started with the Dans Android App, clone the repository to your local machine using the following command:
 
 ```
-git clone https://github.com/Ahmadyogaw/danstestapp.git
+git clone https://gitlab.com/dansmp-ht-1/ahmadyogaw/dans_android.git
 ```
+
 ### Open the project in Android Studio
+
 Open Android Studio and select File -> Open and navigate to the directory where you cloned the repository. Select the Dans_android folder to open the project.
 
 ## Setup
@@ -39,6 +42,7 @@ Open Android Studio and select File -> Open and navigate to the directory where 
 ### Firebase Setup
 
 1. **Add Firebase to your Android project:**
+
    - Go to the [Firebase Console](https://console.firebase.google.com/).
    - Click on `Add project` and follow the setup steps.
    - Register your app with the package name.
@@ -48,16 +52,20 @@ Open Android Studio and select File -> Open and navigate to the directory where 
    - Place the `google-services.json` file in the `app` directory of your Android project.
 
 ### Setup Project
+
 - **Setup JKS File** : create your jks file then add the credentials to `gradle.properties`
-- **Setup properties** : add properties `googleClentID` from `firebase` and `baseUrl` on `gradle.properties` file 
+- **Setup properties** : add properties `googleClentID` from `firebase` and `baseUrl` on `gradle.properties` file
 
 ### Build the project
+
 Once the project is open, let Android Studio download the necessary dependencies. You can do this by clicking on File -> Sync Project with Gradle Files.
 
 ### Run the app
+
 Connect an Android device or use an emulator to run the app. Click on the Run button in Android Studio to build and run the app.
 
 ### Features
+
 - **Sign in with Google**
 - **Job List**: Displays a list of jobs with details such as title, company, and location.
 - **Job Detail**: View detailed information about a specific job, including a detailed description.
