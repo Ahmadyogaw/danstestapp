@@ -8,13 +8,17 @@ plugins {
 android {
     val googleClientId : String by project
     val baseUrl : String by project
+    val jksStoreFile : String by project
+    val jksStorePassword : String by project
+    val jksKeyAlias : String by project
+    val jksKeyPassword : String by project
 
     signingConfigs {
         getByName("debug") {
-            storeFile = file("./dansdev-test.jks")
-            storePassword = "password"
-            keyAlias = "dansdev-test"
-            keyPassword = "password"
+            storeFile = file(jksStoreFile)
+            storePassword = jksStorePassword
+            keyAlias = jksKeyAlias
+            keyPassword = jksKeyPassword
         }
     }
     namespace = "com.danstestapp"
@@ -79,6 +83,7 @@ dependencies {
     implementation(libs.firebase.common.ktx)
     implementation(libs.firebase.auth.ktx)
     implementation(libs.dagger)
+    implementation(libs.prettytime)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

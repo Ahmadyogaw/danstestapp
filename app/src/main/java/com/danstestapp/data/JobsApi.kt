@@ -1,6 +1,5 @@
-package com.danstestapp.api
+package com.danstestapp.data
 
-import com.danstestapp.data.JobResponse
 import com.danstestapp.utils.Endpoints
 import retrofit2.http.GET
 

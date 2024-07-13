@@ -14,6 +14,7 @@ credentialsVersion = "1.2.2"
 firebaseCommonKtx = "21.0.0"
 firebaseAuthKtx = "23.0.0"
 dagger = "2.51.1"
+prettytime = "5.0.9.Final"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version = "1.13.1" }
@@ -38,6 +39,7 @@ credentials = { group = "androidx.credentials", name = "credentials", version.re
 firebase-common-ktx = { group = "com.google.firebase", name = "firebase-common-ktx", version.ref = "firebaseCommonKtx" }
 firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
 dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
+prettytime = { group = "org.ocpsoft.prettytime", name = "prettytime", version.ref = "prettytime" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

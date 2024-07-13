@@ -1,4 +1,4 @@
-package com.danstestapp.api
+package com.danstestapp.data
 
 import com.danstestapp.BuildConfig
 import retrofit2.Retrofit

@@ -38,8 +38,7 @@ class JobDetailActivity : AppCompatActivity() {
                 companyTextView.text = job.company
                 locationTextView.text = job.location
                 typeTextView.text = job.type
-                descriptionTextView.text = job.description
-                howToApplyTextView.text = job.howToApply
+
                 // Handle HTML in description
                 descriptionTextView.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                     Html.fromHtml(job.description, Html.FROM_HTML_MODE_COMPACT)
@@ -48,9 +47,9 @@ class JobDetailActivity : AppCompatActivity() {
                 }
 
                 howToApplyTextView.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    Html.fromHtml(job.description, Html.FROM_HTML_MODE_COMPACT)
+                    Html.fromHtml(job.howToApply, Html.FROM_HTML_MODE_COMPACT)
                 } else {
-                    Html.fromHtml(job.description)
+                    Html.fromHtml(job.howToApply)
                 }
             }
         }

@@ -35,10 +35,11 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLoginWithGoogle.setOnClickListener {
             signInWithGoogle()
         }
+
     }
 
     private fun signInWithGoogle() {
-        val credentialManager = CredentialManager.create(application)
+        val credentialManager = CredentialManager.create(context = this)
 
         val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder()
             .setFilterByAuthorizedAccounts(false)
@@ -52,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
             try {
                 val result = credentialManager.getCredential(
                     request = request,
-                    context = application,
+                    context = this@LoginActivity,
                 )
                 handleSignIn(result)
             } catch (e: GetCredentialException) {
@@ -64,7 +65,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun handleSignIn(result: GetCredentialResponse) {
-
         when (val credential = result.credential) {
             is CustomCredential -> {
                 if (credential.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL) {

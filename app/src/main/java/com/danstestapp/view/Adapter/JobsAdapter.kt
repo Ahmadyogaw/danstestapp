@@ -1,16 +1,12 @@
 
 import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.danstestapp.R
-import com.danstestapp.databinding.JobsItemBinding
 import com.danstestapp.data.JobResponse
+import com.danstestapp.databinding.JobsItemBinding
+import com.danstestapp.utils.DateTimeUtils
 import com.danstestapp.view.activity.JobDetailActivity
-import com.danstestapp.view.activity.LoginActivity
 
 
 class JobAdapter(private var jobList: List<JobResponse>) : RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
@@ -49,16 +45,24 @@ class JobAdapter(private var jobList: List<JobResponse>) : RecyclerView.Adapter<
     inner class JobViewHolder(private val binding: JobsItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(job: JobResponse) {
             binding.apply {
-                jobTitle.text = job.title
-                companyName.text = job.company
-                jobLocation.text = job.location
+                companyTextView.text = job.company
+                locationTextView.text = job.location
+                titleTextView.text = job.title
+                timeAgoTextView.text = DateTimeUtils().convertToRelativeTime(job.createdAt)
+                applicantsTextView.text = "${job.company} Applicants"
+
                 root.setOnClickListener {
                     val intent = Intent(it.context, JobDetailActivity::class.java).apply {
                         putExtra("jobId", job.id)
                     }
                     it.context.startActivity(intent)
                 }
-            }
+                }
+//                jobTitle.text = job.title
+//                companyName.text = job.company
+//                jobLocation.text = job.location
+//
+
         }
     }
 }

@@ -1,7 +1,7 @@
 package com.danstestapp.model
 
-import com.danstestapp.api.ApiClient
-import com.danstestapp.api.JobsApi
+import com.danstestapp.data.ApiClient
+import com.danstestapp.data.JobsApi
 import com.danstestapp.data.JobResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

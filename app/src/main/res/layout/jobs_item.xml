@@ -1,55 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:padding="16dp">
+  android:orientation="vertical"
+  android:background="@android:color/white"
+  android:elevation="4dp"
+  android:padding="16dp"
+  android:layout_marginVertical="8dp"
+  android:layout_marginHorizontal="16dp"
+  android:clipToPadding="false"
+  android:clipChildren="false">
 
-  <ImageView
-    android:id="@+id/company_logo"
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:contentDescription="@string/company_logo"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toStartOf="@id/job_info"
-    app:layout_constraintVertical_bias="0.5"
-    app:srcCompat="@drawable/ic_launcher_background" />
-
-  <LinearLayout
-    android:id="@+id/job_info"
-    android:layout_width="0dp"
+  <RelativeLayout
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toEndOf="@id/company_logo"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintVertical_bias="0.5"
-    android:paddingStart="16dp">
+    android:paddingTop="8dp">
 
     <TextView
-      android:id="@+id/job_title"
+      android:id="@+id/companyTextView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Senior Creative Front End Web Developer"
-      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_alignParentStart="true"
+      android:layout_toStartOf="@id/timeAgoTextView"
+      android:textSize="20sp"
+      android:textColor="@android:color/black"
       android:textStyle="bold" />
 
     <TextView
-      android:id="@+id/company_name"
+      android:id="@+id/timeAgoTextView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="SweetRush"
-      android:textAppearance="?android:attr/textAppearanceSmall" />
+      android:layout_alignParentEnd="true"
+      android:textSize="14sp"
+      android:textColor="@android:color/darker_gray" />
 
-    <TextView
-      android:id="@+id/job_location"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Remote"
-      android:textAppearance="?android:attr/textAppearanceSmall" />
-  </LinearLayout>
+  </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+  <TextView
+    android:id="@+id/locationTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="16sp"
+    android:textColor="@android:color/darker_gray"
+    android:paddingTop="4dp" />
+
+  <TextView
+    android:id="@+id/titleTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="16sp"
+    android:textColor="@android:color/black"
+    android:paddingTop="8dp"
+    android:paddingBottom="4dp" />
+
+  <TextView
+    android:id="@+id/applicantsTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14sp"
+    android:textColor="@android:color/darker_gray"
+    android:paddingTop="4dp" />
+
+</LinearLayout>
